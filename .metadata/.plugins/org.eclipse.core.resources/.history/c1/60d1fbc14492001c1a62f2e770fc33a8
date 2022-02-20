@@ -1,0 +1,29 @@
+package strings;
+
+public class _B32StringPermutations {
+
+	public static void main(String[] args) {
+		String s = "ABC";
+		printPermutations(s, 0, s.length()-1);
+	}
+	
+	private static void printPermutations(String s, int l, int r) {
+		if(l == r){
+			System.out.println(s);
+			//return;
+		}
+		for(int i=l; i<=r; i++) {
+			swap(s, i, l);
+			printPermutations(s, l+1, r);
+			swap(s, i, l);
+		}
+	}
+	
+	private static void swap(String s, int l, int r) {
+		char[] strArray = s.toCharArray();
+		char temp = strArray[l];
+		strArray[l] = strArray[r];
+		strArray[r] = temp;
+		s = String.valueOf(strArray);
+	}
+}

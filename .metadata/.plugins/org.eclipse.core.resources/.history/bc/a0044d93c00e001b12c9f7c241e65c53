@@ -1,0 +1,25 @@
+package com.testing;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class Test2 {
+
+	public static void main(String[] args) {
+		String mydata = "Cube refresh failed for Essbase Cube: missSubV, Message: " +
+
+		"Error: Substitution variable [SubVar1] doesn't exist." +
+		
+		"Error: Substitution variable [SubVar3] doesn't exist." +
+		
+		"Error: Substitution variable [SubVar5] doesn't exist.";
+		Pattern pattern = Pattern.compile("\\[(.*?)\\]");
+		Matcher matcher = pattern.matcher(mydata);
+		while (matcher.find())
+		{
+		    System.out.println(matcher.group(1));
+		}
+
+	}
+
+}

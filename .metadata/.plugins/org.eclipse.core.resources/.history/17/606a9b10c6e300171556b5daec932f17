@@ -1,0 +1,45 @@
+package com.essbase.japi;
+
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class CubesComparator {
+
+	public static void main(String[] args) throws IOException {
+		
+		/*EssBaseCube sourceCube = new EssBaseCube();
+		sourceCube.setApplicationName("Sample_U");
+		sourceCube.setCubeName("Basic");
+		
+		EssBaseCube targetCube = new EssBaseCube();
+		targetCube.setApplicationName("SampCopy");
+		targetCube.setCubeName("East");
+
+		try{
+			EssBaseConnectionManager.connectToCube(sourceCube);
+			sourceCube.load();
+			
+			EssBaseConnectionManager.connectToCube(targetCube);
+			targetCube.load();
+			
+			EssBaseUtil.cubeComparator(sourceCube, targetCube);
+
+		} catch (EssException e) {
+			System.out.println("Error : "+e.getMessage());
+			e.printStackTrace();
+		} catch (IOException e) {
+			System.out.println("Error : "+e.getMessage());
+			e.printStackTrace();
+		}finally{
+			EssBaseConnectionManager.comeOutClean(sourceCube);
+			EssBaseConnectionManager.comeOutClean(targetCube);
+			Writer.closeWriter();
+		}*/
+		BufferedWriter writer = new BufferedWriter(new FileWriter("D:\\diff.html"));
+		writer.append("<html><font color='red' style=\"background-color:#eacbdb;padding-left:30em;\">"+"Source Cube Name : "+"</font><br/></html>");
+		writer.append("\t<html><font color='green' style=\"background-color:powderblue;\">"+"Source Cube Name : "+"</font></html>");
+		writer.close();
+		System.out.println("done");
+	}
+}

@@ -1,0 +1,36 @@
+
+public class RaceConditionAndSolution {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}
+
+class CounterWithRaceCondition {
+	int c = 0;
+	
+	public void increment(){
+		c++;
+	}
+	
+	private void decrement(){
+		c--;
+	}
+	private int getValue(){
+		return c;
+	}
+}
+
+class IncrementingThread extends Thread{
+	CounterWithRaceCondition counter;
+	
+	public IncrementingThread(CounterWithRaceCondition counter) {
+		this.counter = counter;
+	}
+	
+	for(int i=0; i<200; i++) {
+		counter.increment();
+	}
+}

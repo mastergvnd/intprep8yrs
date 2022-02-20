@@ -1,0 +1,12 @@
+package lambda;
+
+public class Person {
+	String name;
+	int age;
+	
+	public Peron(String name, int age) {
+		this.name = name;
+		this.age = age;
+	}
+	
+}

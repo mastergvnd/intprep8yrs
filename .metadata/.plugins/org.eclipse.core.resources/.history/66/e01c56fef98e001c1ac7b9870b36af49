@@ -1,0 +1,37 @@
+package arrays;
+
+import java.util.PriorityQueue;
+
+import org.junit.Assert;
+
+
+public class _A5_KthLargestElelementFromStream {
+
+	public static void main(String[] args) {
+		KthLargest kth = new KthLargest(3, new int[]{4, 5, 8, 2});
+		Assert.assertEquals("Wrong Answer", 4, kth.add(3));
+	}
+
+}
+
+class KthLargest {
+
+	PriorityQueue<Integer> queue = new PriorityQueue<>();
+	int k;
+    public KthLargest(int k, int[] nums) {
+    	this.k = k;
+    	for(int num : nums) {
+    		if(queue.size() == k)
+    			queue.poll();
+    		add(num);
+    	}
+    	System.out.println(queue);
+    }
+    
+    public int add(int val) {
+    	if(queue.size() == k)
+			queue.poll();
+    	queue.add(val);
+    	return queue.peek();
+    }
+}

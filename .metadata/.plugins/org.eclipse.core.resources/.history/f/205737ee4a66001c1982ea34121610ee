@@ -1,0 +1,54 @@
+package paypal;
+
+import linkedlist.DoublyLinkedList;
+import linkedlist.DoublyListNode;
+import linkedlist.LinkedListUtils;
+
+public class CloneSinglyLinkedListWithRandomPointers {
+
+	public static void main(String[] args) {
+		DoublyLinkedList list = new DoublyLinkedList();
+		list.head = new DoublyListNode(1);
+		
+		list.head.next = new DoublyListNode(2);
+		list.head.next.next = new DoublyListNode(3);
+		list.head.next.next.next = new DoublyListNode(4);
+		list.head.next.next.next.next = new DoublyListNode(5);
+		
+		list.head.random = list.head.next.next;
+        list.head.next.random = list.head;
+        list.head.next.next.random = list.head.next.next.next.next;
+        list.head.next.next.next.random = list.head.next.next.next.next;
+        list.head.next.next.next.next.random = list.head.next;
+
+        System.out.println("Original list : ");
+        LinkedListUtils.printDoublyLinkedList(list.head);
+        deepCloneWithoutAdditionalSpace(list.head);
+	}
+	
+    public static DoublyListNode deepCloneWithoutAdditionalSpace(DoublyListNode head) {
+    	System.out.println("inside");
+    	DoublyListNode ptr = head;
+    	while(ptr != null) {
+    		DoublyListNode temp = new DoublyListNode(ptr.val);
+    		temp.next = ptr.next;
+    		ptr.next = temp;
+    		ptr = ptr.next.next;
+    	}
+    	ptr = head;
+    	while(ptr != null) {
+    		DoublyListNode current = ptr.next;
+    		current.random = ptr.random.next;
+    		ptr = ptr.next.next;
+    	}
+    	ptr = head;
+    	DoublyListNode head2 = ptr.next;
+    	while(ptr != null) {
+    		DoublyListNode current = ptr.next;
+    	}
+    	System.out.println("Out");
+    	LinkedListUtils.printDoublyLinkedList(head);
+    	return null;
+    }
+
+}

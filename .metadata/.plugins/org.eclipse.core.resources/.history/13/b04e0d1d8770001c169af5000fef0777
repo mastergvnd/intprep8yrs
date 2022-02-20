@@ -1,0 +1,18 @@
+package paypal;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class _B25ReconstructItinerary {
+
+	public static void main(String[] args) {
+		List<List<String>> tickets = new ArrayList<List<String>>();
+		tickets.add(new ArrayList(Collections.list("Chennai", "Banglore")));
+		tickets.add(new ArrayList(Collections.list("Bombay", "Delhi")));
+		tickets.add(new ArrayList(Collections.list("Chennai", "Banglore")));
+		tickets.add(new ArrayList(Collections.list("Chennai", "Banglore")));
+		tickets.add(new ArrayList(Collections.list("Chennai", "Banglore")));
+	}
+
+}

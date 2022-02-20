@@ -1,0 +1,7 @@
+1643536332043	Rename type 'BoundedBufferSemaphore'
+1643536452560	Rename type 'CountingSemaphore'
+1643536790963	Rename field 'count'
+1643538693089	Rename method 'enquue'
+1643631106612	Rename type 'DiningPhilosopher'
+1643631547624	Rename type '_B3_DiningPhilosopherImpl'
+1643631644101	Rename method 'contemplate'

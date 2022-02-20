@@ -1,0 +1,10 @@
+package com.sonali.collection.ArrayList;
+
+public class Employee {
+	public int rollNo;
+	public String name;
+
+	public Employee() {
+
+	}
+}

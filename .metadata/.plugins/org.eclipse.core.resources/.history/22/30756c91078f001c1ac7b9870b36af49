@@ -1,0 +1,11 @@
+package linkedlist;
+
+public class _B18ConvertLinkedListToDecimalNumber {
+
+	public static void main(String[] args) {
+		LinkedList list = new LinkedList(new int[]{101});
+		LinkedListUtils.printLinkedList(list.head);
+
+	}
+
+}

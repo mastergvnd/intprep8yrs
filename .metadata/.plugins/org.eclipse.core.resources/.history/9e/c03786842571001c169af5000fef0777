@@ -1,0 +1,19 @@
+package paypal;
+
+import java.util.AbstractMap;
+import java.util.Map;
+import java.util.PriorityQueue;
+
+public class _B26ReorganizeString {
+
+	public static void main(String[] args) {
+		PriorityQueue<Map.Entry<Character, Integer>> q = new PriorityQueue<>();
+		q.add(new AbstractMap.SimpleEntry('B', 2));
+		q.add(new AbstractMap.SimpleEntry('D', 4));
+		q.add(new AbstractMap.SimpleEntry("A", 3));
+		q.add(new AbstractMap.SimpleEntry("C", 1));
+		
+		System.out.println(q.poll());
+	}
+
+}

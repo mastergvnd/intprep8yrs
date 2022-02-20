@@ -1,0 +1,31 @@
+package com.hyperion.planning;
+
+import com.essbase.api.base.EssException;
+
+public class MaxlDemo {
+	public static void main(String[] args) {
+		System.out.println("starting");
+		EssbaseCube cube = new EssbaseCube();
+		cube.setApplicationName("ASOsamp23");
+		cube.setCubeName("Sample");
+		
+		try{
+			EssbaseConnectionManager.connectToCube(cube);
+			cube.load();
+			cube.openMaxlSession("maxlSession");
+			boolean isQTEnabled = EssbaseUtil.isQueryTrackingEnabled(cube);
+			System.out.println("isQTEnabled : "+isQTEnabled);
+			if(!isQTEnabled){
+				EssbaseUtil.enableQueryTracking(cube);
+			}
+			isQTEnabled = EssbaseUtil.isQueryTrackingEnabled(cube);
+			System.out.println("isQTEnabled : "+isQTEnabled);
+		} catch (EssException e) {
+			System.out.println("Error : "+e.getMessage());
+			e.printStackTrace();
+		}
+		finally{
+			EssbaseConnectionManager.comeOutClean(cube);
+		}
+	}
+}

@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.PriorityQueue;
 
 public class Test2 {
 	public static void main(String[] args) {
@@ -23,5 +24,15 @@ public class Test2 {
 //			return b.getScore() - a.getScore();
 //		});
 		System.out.println(list);
+		
+		
+		PriorityQueue<Integer> q = new PriorityQueue<>((a,b) -> b-a);
+		q.add(5);
+		q.add(3);
+		q.add(9);
+		q.add(1);
+		q.add(4);
+		while(!q.isEmpty())
+			System.out.println(q.poll());
 	}
 }

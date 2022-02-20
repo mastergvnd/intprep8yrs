@@ -1,0 +1,6 @@
+package com.sonali.collection.ArrayList;
+
+public class Test {
+Employee emp = new Employee();
+
+}

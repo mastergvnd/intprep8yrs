@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="lib" path="D:/Mount/package/HspFinStmt.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/package/HspJS.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/package/HspProjects.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/package/HspPSB.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/package/HspPSBDP.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/package/HspWF.jar"/>
+	<classpathentry kind="lib" path="C:/Oracle/Middleware/EPMSystem11R1/common/EssbaseJavaAPI/11.1.2.0/lib/ess_es_server.jar"/>
+	<classpathentry kind="lib" path="C:/Oracle/Middleware/EPMSystem11R1/common/EssbaseJavaAPI/11.1.2.0/lib/ess_japi.jar"/>
+	<classpathentry kind="lib" path="C:/Oracle/Middleware/EPMSystem11R1/common/EssbaseJavaAPI/11.1.2.0/lib/ess_maxl.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/JUnit/hamcrest-core-1.3.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/JUnit/junit-4.12.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/package/commons-collections4-4.0.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/package/jmockit.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/activation.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/adm.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/annotation.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/annotationcp.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/ant-contrib.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/antisamy-bin.1.3.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/ap.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/audit-client.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/broker-provider.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/c3p0-0.9.1.1.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/c3p0-0.9.5.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/calcmgrcommon.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/calcmgrparser.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/calcmgrscheduler.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/CalcMgrSchedulerUIADFLib.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/cls.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/com.bea.core.apache.commons.collections_3.2.0.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/com.bea.core.apache.commons.logging_1.1.0.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/com.bea.core.apache.commons.net_1.0.0.0_1-4-1.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/com.bea.core.apache.commons.pool_1.3.0.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/com.bea.core.weblogic.workmanager_1.7.0.0.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/commons-codec-1.3.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/commons-codec-1.8.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/commons-collections4-4.0.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/commons-configuration-1.5.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/commons-fileupload-1.2.1.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/commons-httpclient-3.1.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/commons-io-1.4.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/commons-lang-2.3.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/commons-lang3-3.1.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/commons-lang3-3.4.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/css.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/dms.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/dom.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/epm_rest_common.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/epmautomate.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/epml.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/ESAPI-2.0-rc4.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/ess_es_server.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/ess_japi.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/essbaseplugin.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/findbugs-ant.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/fmwgenerictoken.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/groovy-all-2.3.4.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/groovy-all-2.4.3.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/groovy-all-2.4.7.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/groovy-all-2.4.8.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/HBRExporter.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/hbrhppluginjar.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/hbrmigrator.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/hit-applistener.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/hit-redirector.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/hrcr.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/HReports.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/HspCDFUt.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/hyjdbc.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/i18nAPI_v3.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/interop-sdk.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/j2ee.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/jakarta-regexp-1.4.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/jakarta-slide-webdavlib.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/javax.json-1.0.4.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/javax.json-api-1.0.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/jaxp-api.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/jce1_2_2.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/jcert.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/jdom.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/jnet.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/joda-time-2.3.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/joda-time-2.9.4.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/jps-api.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/jps-common.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/jps-internal.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/json.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/jsse.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/junit.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/lcm-clu.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/ldapbp.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/local_policy.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/log4j.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/log4j-1.2.14.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/mail.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/mvel.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/nanfwk.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/nansvs.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/nanuicore.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/nekohtml-0.9.5.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/ognl-2.6.7.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/ojdbc6.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/ojdl.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/opencsv.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/org.apache.commons.beanutils_1.6.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/org.apache.commons.digester_1.8.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/P6IntegrationClient.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/registry-api.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/sautils.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/sawbridge.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/sawconnect.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/sawj2eeutils.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/sawjaxwsutils.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/sawsoapjaxwsstubs.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/sax.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/servletapi-2.3.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/slf4j-api-1.6.6.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/slf4j-log4j12-1.6.6.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/spotbugs-ant.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/sunjce_provider.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/swagger-annotations-1.5.4.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/swingall.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/US_export_policy.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/versioninfo.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/wlbase.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/wldb2.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/wlpool.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/wlsqlserver.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/wlutil.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/xalan.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/xdocore.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/xdoparser.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/xmlparserv2-904.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/xmlrpc-2.0.1.jar"/>
+	<classpathentry kind="lib" path="D:/Mount/Unknown Jars/xsltc.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

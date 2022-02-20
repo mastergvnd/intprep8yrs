@@ -1,0 +1,9 @@
+package com.testing;
+
+public class CreateUsageXML {
+
+	public static void main(String[] args) {
+		
+	}
+
+}

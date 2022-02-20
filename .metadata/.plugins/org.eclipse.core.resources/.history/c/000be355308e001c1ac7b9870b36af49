@@ -1,0 +1,50 @@
+package arrays;
+
+import org.junit.Assert;
+
+//Input:  n = "218765"
+//Output: "251678"
+//
+//Input:  n = "1234"
+//Output: "1243"
+//
+//Input: n = "4321"
+//Output: "Not Possible"
+//
+//Input: n = "534976"
+//Output: "536479"
+//https://leetcode.com/problems/next-greater-element-iii/
+
+
+public class _A3_NextGreaterNumber {
+
+	public static void main(String[] args) {
+		Assert.assertEquals("Wrong Number",251678, getNextGreaterNumber(218765));
+	}
+
+	private static int getNextGreaterNumber(int num) {
+		int temp = num;
+		int lastDigit = temp % 10;
+		
+		System.out.println(num);
+		
+		int digitIndex = 1;
+		while(temp > 0) {
+			if(temp % 10 < lastDigit) {
+				break;
+			}
+			temp = temp / 10;
+			digitIndex++;
+		}
+		
+		if(temp == 0)
+			return -1;
+		System.out.println(digitIndex);
+		
+		while() {
+
+		}
+		return -1;
+	}
+
+}

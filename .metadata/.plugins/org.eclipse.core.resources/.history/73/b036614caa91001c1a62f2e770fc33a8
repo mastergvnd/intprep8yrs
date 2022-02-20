@@ -1,0 +1,14 @@
+package arrays;
+
+public class _A7_BinarySearchInRotatedArray {
+
+	public static void main(String[] args) {
+		bina
+
+	}
+	
+	private static int binarySearch(int nums[], int target) {
+		
+	}
+
+}

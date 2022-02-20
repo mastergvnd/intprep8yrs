@@ -1,0 +1,9 @@
+package arrays;
+
+public class _A6_K_PairsWithSmallestSums {
+
+	public static void main(String[] args) {
+		
+	}
+
+}

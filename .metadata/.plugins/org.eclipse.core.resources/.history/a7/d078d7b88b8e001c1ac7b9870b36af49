@@ -1,0 +1,19 @@
+package arrays;
+
+import org.junit.Assert;
+
+public class _A4_MaximumProfitInJobScheduling {
+
+	public static void main(String[] args) {
+		Solution solution = new Solution();
+		int maxProfit = solution.jobScheduling(new int[]{1}, new int[]{1}, new int[]{1});
+		Assert.assertEquals("Wrong answer", 1, 1 );
+	}
+
+}
+
+class Solution {
+    public int jobScheduling(int[] startTime, int[] endTime, int[] profit) {
+        return 0;
+    }
+}

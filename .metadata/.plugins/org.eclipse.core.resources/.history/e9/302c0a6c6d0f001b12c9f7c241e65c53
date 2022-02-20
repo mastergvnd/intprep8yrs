@@ -1,0 +1,30 @@
+package com.testing;
+
+import java.util.HashSet;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class Test2 {
+
+	public static void main(String[] args) {
+		HashSet<String> missingSubVars = new HashSet<>();
+		StringBuilder mydata = new StringBuilder("Cube refresh failed for Essbase Cube: missSubV, Message: " +
+		"Error: Substitution variable [SubVar1] doesn't exist." +
+		"Error: Substitution variable [SubVar3] doesn't exist." +
+		"Error: Substitution variable [SubVar3] doesn't exist." +
+		"Error: Substitution variable [SubVar5] doesn't exist." +
+		"Error compiling formula for [G2N_Entity]: Unknown member [?? " +
+		"		] on line [10]" +
+		"Error: Substitution variable [PPDYear] doesn't exist.");
+
+		Pattern pattern = Pattern.compile("Substitution variable \\[(.*?)\\]");
+		Matcher matcher = pattern.matcher(mydata);
+		while (matcher.find()) {
+			String value = matcher.group(1);
+			missingSubVars.add(value);
+		}
+		System.out.println(missingSubVars);
+		mydata = mydata.replace("Error: Substitution variable [SubVar3] doesn't exist.", "");
+		System.out.println(mydata);
+	}
+}

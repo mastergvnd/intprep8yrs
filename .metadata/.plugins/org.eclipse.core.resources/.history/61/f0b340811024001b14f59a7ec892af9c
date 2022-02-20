@@ -1,0 +1,69 @@
+import java.util.LinkedHashSet;
+import java.util.Set;
+
+import com.essbase.api.base.EssException;
+import com.essbase.api.datasource.IEssCube;
+import com.essbase.api.datasource.IEssOlapApplication;
+import com.essbase.api.datasource.IEssOlapServer;
+import com.essbase.api.datasource.IEssCube.EEssCubeType;
+import com.essbase.api.domain.IEssDomain;
+import com.essbase.api.metadata.IEssCubeOutline;
+import com.essbase.api.session.IEssbase;
+
+public class TestDateFormatWithExistingApp {
+
+    private static final String USER_NAME = "epm_default_cloud_admin";
+    private static final String USER_PWD = "welcome1";
+    private static final String ESSBASE_SERVER = "slc05pqh.us.oracle.com:14231";
+
+    private static final String ESSBASE_MODE = "Embedded";
+    
+	public static void main(String[] args) {
+
+		IEssbase essbaseHome = null;
+        IEssOlapServer olapSvr = null;
+        IEssOlapApplication anOlapApp = null;
+        final Set<IEssOlapApplication> allOlapApps = new LinkedHashSet<IEssOlapApplication>();
+        try {
+            essbaseHome = IEssbase.Home.create(IEssbase.JAPI_VERSION);
+            final IEssDomain essbaseDomain = essbaseHome.signOn(USER_NAME, USER_PWD, false, null, ESSBASE_MODE);
+
+            olapSvr = (IEssOlapServer)essbaseDomain.getOlapServer(ESSBASE_SERVER);
+            olapSvr.connect();
+            IEssCube aCube = olapSvr.getApplication("DateF").getCube("Settings");
+            
+            IEssCubeOutline outline = aCube.openOutline(false, true, true);
+            outline.getCube().setActive();
+            System.out.println("Date format before save int : " + outline.getDateFormat());
+            System.out.println("Date Format before save string : " + outline.getDateFormatString());
+//            outline.setDateFormat(1);
+            //dateFormat - 0 for MMDDYYYY (default), 1 for DDMMYY.
+//            outline.setDateFormatString("mm/dd/yyyy");
+//            outline.updatePropertyValues();
+//            outline.save(IEssCube.EEssRestructureOption.sm_fromInt(IEssCube.EEssRestructureOption.KEEP_ALL_DATA_INT_VALUE));
+            System.out.println("Date format after save int : " + outline.getDateFormat());
+            System.out.println("Date Format after save string : " + outline.getDateFormatString());
+            System.out.println("Done");
+        } catch (EssException x) {
+            x.printStackTrace();
+        } finally {
+            try {
+                if (olapSvr != null && olapSvr.isConnected() == true)
+                    olapSvr.disconnect();
+            } catch (EssException x) {
+                //Ignored
+            }
+
+            try {
+                if (essbaseHome != null && essbaseHome.isSignedOn() == true)
+                    essbaseHome.signOff();
+            } catch (EssException x) {
+                //Ignored
+            }
+        }
+
+
+	
+	}
+
+}

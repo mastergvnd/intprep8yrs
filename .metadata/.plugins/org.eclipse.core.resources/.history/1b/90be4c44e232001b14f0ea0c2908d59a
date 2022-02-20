@@ -1,0 +1,5 @@
+
+@XmlAccessorType(XmlAccessType.FIELD)
+public class EssbaseSmartListEntry {
+	
+}

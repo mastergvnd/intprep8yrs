@@ -1,0 +1,139 @@
+package com.test;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+
+import com.essbase.api.base.EssException;
+import com.essbase.api.datasource.IEssCubeDataloadInstance;
+import com.essbase.api.datasource.IEssOlapFileObject;
+import com.hyperion.planning.EssbaseConnectionManager;
+import com.hyperion.planning.EssbaseCube;
+import com.hyperion.planning.ExcelUtil;
+
+public class UnitTesting {
+
+	public static void main(String[] args) throws IOException {
+		/*
+		 * EssbaseCube sourceCube = new EssbaseCube();
+		 * sourceCube.setApplicationName("Sample_U");
+		 * sourceCube.setCubeName("Basic");
+		 */
+		// sourceCube.setApplicationName("SampCopy");
+		// sourceCube.setCubeName("East");
+		// sourceCube.setApplicationName("ASOsamp");
+		// sourceCube.setCubeName("Sample");
+		EssbaseCube targetCube = new EssbaseCube();
+		 //targetCube.setApplicationName("AVision");
+		 //targetCube.setCubeName("VisASO");
+		// targetCube.setApplicationName("Sample_U");
+		// targetCube.setCubeName("Basic");
+		targetCube.setApplicationName("Sample");
+		targetCube.setCubeName("Basic");
+//		targetCube.setApplicationName("HP1_ASO");
+//		targetCube.setCubeName("HP1_ASO");
+		// Writer.setFilePath("D:\\diff.txt");
+		// Writer.setFilePath("D:\\diff.xlsx");
+		// Writer.init();
+		ExcelUtil.setFilePath("D:\\sheets\\diff7.xlsx");
+		ExcelUtil.init();
+
+		try {
+			/*
+			 * EssbaseConnectionManager.connectToCube(sourceCube);
+			 * sourceCube.load();
+			 */
+
+			EssbaseConnectionManager.connectToCube(targetCube);
+			targetCube.load();
+
+			/*IEssCube cube = targetCube.getCube();
+			System.out.println("Loading data...");
+			String data = "Product Jan Sales Actual Market 7777\n" + "Product Feb Sales Actual Market 8888\n" + "Product Mar Sales Actual Market 9999\n";
+			cube.beginUpdate(true, false);
+			cube.sendString(data);
+			cube.endUpdate();
+			System.out.println("Data Loading completed.");*/
+
+			// targetCube.getOlapServer().copyOlapFileObjectToServer("Sample",
+			// "Basic", IEssOlapFileObject.TYPE_CALCSCRIPT, "tCalc2",
+			// "C:\\Users\\govgupta.ORADEV\\Desktop\\testCalc2.csc", true);
+			// targetCube.getOlapServer().deleteOlapFileObject("Sample",
+			// "Basic", IEssOlapFileObject.TYPE_CALCSCRIPT, "tCalc2");
+
+			/*
+			 * System.out.println(targetCube.getOlapApp().getMinimumCubeAccess()
+			 * .intValue());
+			 * System.out.println(Arrays.toString(targetCube.getOlapApp().
+			 * getMinimumCubeAccess().getPossibleValues()));
+			 * System.out.println(targetCube.getOlapApp().getMinimumCubeAccess()
+			 * .fromString("Filter access"));
+			 * targetCube.getCube().setCubeAccess(EEssCubeAccess.sm_fromInt(arg0
+			 * )); System.out.println(targetCube.getCube().getCubeAccess().
+			 * stringValue());
+			 */
+
+			/*
+			 * String str2[][] = targetCube.getCube().beginDataload("testData",
+			 * IEssOlapFileObject.TYPE_RULES,
+			 * "C:\\Users\\govgupta.ORADEV\\Desktop\\data3 - Copy.txt",
+			 * IEssOlapFileObject.TYPE_TEXT, false, 1);
+			 */
+/*			File temp = File.createTempFile("testEssArchiveFile", ".tmp"); 
+			System.out.println(temp.getAbsolutePath());
+			String tempDir = System.getProperty("java.io.tmpdir"); 
+			System.out.println(tempDir);
+			IEssCubeDataloadInstance e = targetCube.getCube().createDataloadInstance();
+			e.setRulesFile("C:\\Users\\govgupta.ORADEV\\Desktop\\testRule.rul");
+			targetCube.getCube().beginDataload(true, true, false, e.getRulesFile(), IEssOlapFileObject.TYPE_RULES);
+			File file = new File("C:\\Users\\govgupta.ORADEV\\Desktop\\data3 - Copy.txt");
+			BufferedReader br = new BufferedReader(new FileReader(file));
+			StringBuffer st = new StringBuffer();
+			String s;
+			while ((s = br.readLine()) != null)
+				st.append(s).append(System.lineSeparator());
+			targetCube.getCube().sendString(st.toString());
+			final String[][] dataLoadErrors = targetCube.getCube().endDataload();*/
+//			targetCube.getCube().beginDataload("testData", IEssOlapFileObject.TYPE_RULES, "C:\\Users\\govgupta.ORADEV\\Desktop\\data3 - Copy.txt", IEssOlapFileObject.TYPE_TEXT, false, 3);
+//			System.out.println("Data load completed.");
+			String data = "Product Jan Sales Actual Market 7777\n" + "Product Feb Sales Actual Market 8888\n" + "Product Mar Sales Actual Market 9999\n";
+			System.out.println(data);
+			targetCube.getCube().loadData(IEssOlapFileObject.TYPE_RULES, null, IEssOlapFileObject.TYPE_TEXT, "C:\\Users\\govgupta.ORADEV\\Desktop\\data3 - Copy.txt", false);
+			//"C:\\Users\\govgupta.ORADEV\\Desktop\\data3 - Copy.txt"
+//			targetCube.getCube().loadBufferInit(2, IEssCube.ESS_ASO_DATA_LOAD_BUFFER_DUPLICATES_ADD,IEssCube.ESS_ASO_DATA_LOAD_BUFFER_IGNORE_MISSING_VALUES, 100);
+//			final String[][] dataLoadErrors = targetCube.getCube().beginDataload(null, IEssOlapFileObject.TYPE_RULES, "C:\\Users\\govgupta.ORADEV\\Desktop\\ASO_Data3.txt", IEssOlapFileObject.TYPE_TEXT, false, 2);
+//			targetCube.getCube().loadBufferTerm(new long[] { 2 }, IEssCube.ESS_ASO_DATA_LOAD_BUFFER_STORE_DATA, IEssCube.ESS_ASO_DATA_LOAD_BUFFER_COMMIT, IEssCube.ESS_ASO_DATA_LOAD_INCR_TO_MAIN_SLICE);
+			// targetCube.getOlapServer().copyOlapFileObjectToServer("SampCopy",
+			// "Basic", IEssOlapFileObject.TYPE_TEXT, "data3",
+			// "C:\\Users\\govgupta.ORADEV\\Desktop\\data3.txt", true);
+			// targetCube.getOlapServer().copyOlapFileObjectFromServer("SampCopy",
+			// "Basic", IEssOlapFileObject.TYPE_TEXT, "data3",
+			// "C:\\Users\\govgupta.ORADEV\\Desktop\\act3.txt", false);
+			System.out.println("File uploaded");
+			// EssbaseUtil.loadCache(targetCube, new Outline());
+
+			// EssbaseUtil.cubeComparator(sourceCube, targetCube);
+			// TreeComparator.writeSummary(sourceCube, targetCube);
+			// EssbaseTreeComparator.printComparison(sourceCube, targetCube);
+		} catch (EssException e) {
+			System.out.println("Error : " + e.getMessage());
+			e.printStackTrace();
+		} /*
+			 * catch (IOException e) {
+			 * System.out.println("Error : "+e.getMessage());
+			 * e.printStackTrace(); }
+			 */
+		finally {
+			// EssbaseConnectionManager.comeOutClean(sourceCube);
+			EssbaseConnectionManager.comeOutClean(targetCube);
+			// Writer.closeWriter();
+			ExcelUtil.closeWorkbook();
+		}
+		/*
+		 * Desktop dt = Desktop.getDesktop(); dt.open(new
+		 * File("D:\\sheets\\diff7.xlsx"));
+		 */
+		System.out.println("done");
+	}
+}

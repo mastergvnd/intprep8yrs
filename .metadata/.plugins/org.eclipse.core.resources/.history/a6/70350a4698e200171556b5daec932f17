@@ -1,0 +1,142 @@
+package com.essbase.japi;
+
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import com.essbase.api.base.EssException;
+import com.essbase.api.base.IEssBaseObject;
+import com.essbase.api.metadata.IEssCubeOutline;
+import com.essbase.api.metadata.IEssDimension;
+import com.essbase.api.metadata.IEssMember;
+
+public class EssBaseUtil {
+		
+	public static Map<String, String> readMemberProperties(List<IEssMember> membersList) throws EssException {
+		Map<String, String> propertyMap = new HashMap<String, String>();
+		for(IEssMember member : membersList){
+			String[] propertyNames = member.getPropertyNames();
+			for(String property : propertyNames){
+				try{
+					String propertyValue = member.getPropertyValueAny(property).toString();
+					propertyMap.put(property, propertyValue);
+				}catch(EssException e){
+					/*Skip this because the property is not found*/
+				}
+			}
+			System.out.println("Properties for Member : "+member.getName());
+			System.out.println(propertyMap);
+		}
+		return propertyMap;
+	}
+
+	public static void readDimensionProperties(List<IEssDimension> dimensionsList) throws EssException {
+		for(IEssDimension dimension : dimensionsList){
+			Map<String, String> propertyMap = new HashMap<String, String>();
+			String[] propertyNames = dimension.getPropertyNames();
+			for(String property : propertyNames)
+				propertyMap.put(property, dimension.getPropertyValueAny(property).toString());
+			System.out.println("Properties for Dimension : "+dimension.getName());
+			System.out.println(propertyMap);
+		}
+		System.out.println();
+	}
+	
+	public static Map<String, String> readDimensionProperties(IEssDimension dimension) throws EssException {
+		Map<String, String> propertyMap = new HashMap<String, String>();
+		String[] propertyNames = dimension.getPropertyNames();
+		for (String property : propertyNames)
+			propertyMap.put(property, dimension.getPropertyValueAny(property).toString());
+		return propertyMap;
+	}
+
+	public static List<IEssMember> readMembers(List<IEssDimension> dimensionsList) throws EssException {
+		System.out.println("Dimension Name");
+		List<IEssMember> membersList = new ArrayList<IEssMember>();
+		for(IEssDimension dimensionName : dimensionsList){
+			IEssBaseObject[] members = dimensionName.getDimensionRootMember().getChildMembers().getAll();
+			System.out.println(dimensionName);
+			for(int i = 0; i<members.length; i++){
+				IEssMember member = (IEssMember) members[i];
+				membersList.add(member);
+				System.out.println("\t"+member.getName());
+				readSubMemers(member, membersList, "\t\t");
+			}
+		}
+		return membersList;
+	}
+
+	public static void readSubMemers(IEssMember member, List<IEssMember> membersList, String alignment) throws EssException {
+		IEssBaseObject[] members = member.getChildMembers().getAll();
+		for(int i = 0; i<members.length; i++){
+			IEssMember subMember = (IEssMember) members[i];
+			membersList.add(subMember);
+			System.out.println(alignment+subMember.getName());
+			readSubMemers(subMember, membersList, alignment+"\t");
+		}
+	}
+
+	public static List<IEssDimension> readDimensionsAsList(IEssCubeOutline cubeOutLine) throws EssException{
+		List<IEssDimension> dimenionsList = new ArrayList<IEssDimension>();
+		IEssBaseObject[] dimensions = cubeOutLine.getDimensions().getAll();
+		for(int i = 0; i<dimensions.length; i++){
+			IEssDimension dimension = (IEssDimension) dimensions[i];
+			dimenionsList.add(dimension);
+		}
+		return dimenionsList;
+	}
+	
+	public static Map<String, IEssDimension> readDimensionsAsMap(IEssCubeOutline cubeOutLine) throws EssException{
+		Map<String, IEssDimension> dimenionsList = new HashMap<String, IEssDimension>();
+		IEssBaseObject[] dimensions = cubeOutLine.getDimensions().getAll();
+		for(int i = 0; i<dimensions.length; i++){
+			IEssDimension dimension = (IEssDimension) dimensions[i];
+			dimenionsList.put(dimension.getName(), dimension);
+		}
+		return dimenionsList;
+	}
+
+	public static void cubeComparator(EssBaseCube sourceCube, EssBaseCube targetCube) throws EssException, IOException {
+		Map<String, IEssDimension> sourceDimensinMap = readDimensionsAsMap(sourceCube.getCubeOutline());
+		Map<String, IEssDimension> targetDimensinMap = readDimensionsAsMap(targetCube.getCubeOutline());
+		Writer.write("Source Cube Name : "+sourceCube.getCubeName(), Writer.NEW_LINE);
+		//writer.append("Source Cube Name : "+sourceCube.getCubeName()+System.lineSeparator());
+		//writer.append("Target Cube Name : "+targetCube.getCubeName()+System.lineSeparator());
+		Writer.write("Target Cube Name : "+targetCube.getCubeName(), Writer.NEW_LINE);
+		findDimensionDifferences(sourceDimensinMap, targetDimensinMap, writer);
+		writer.close();
+	}
+
+	private static void findDimensionDifferences(Map<String, IEssDimension> sDimensionMap,
+			Map<String, IEssDimension> tDimensionMap, BufferedWriter writer) throws EssException, IOException {
+		System.out.println("Number of dimensions in source cube: " + sDimensionMap.size());
+		System.out.println("Number of dimensions in target cube: " + tDimensionMap.size());	
+		Writer.write(writer, "Number of dimensions in source cube: "+sDimensionMap.size(), Writer.NEW_LINE);
+		Writer.write(writer, "Number of dimensions in target cube: "+tDimensionMap.size(), Writer.NEW_LINE);
+		//writer.append("Number of dimensions in source cube: "+sDimensionMap.size()+System.lineSeparator());
+		//writer.append("Number of dimensions in target cube: "+tDimensionMap.size()+System.lineSeparator());
+		for(String dName : sDimensionMap.keySet()){
+			if(tDimensionMap.containsKey(dName)){
+				checkforDimensionProperties(sDimensionMap.get(dName), tDimensionMap.get(dName), writer);
+			}else{
+				W
+				writer.append("Dimension is missing in target cube,"+dName+System.lineSeparator());
+			}
+		}
+		
+	}
+
+	private static void checkforDimensionProperties(IEssDimension sDimension, IEssDimension tDimension, BufferedWriter writer) throws EssException, IOException {
+		Map<String, String> sdProperty = readDimensionProperties(sDimension);
+		Map<String, String> tdProperty = readDimensionProperties(tDimension);
+		for(String dName : sdProperty.keySet()){
+			if(tdProperty.containsKey(dName) && !sdProperty.get(dName).equals(tdProperty.get(dName))){
+				writer.append("Dimension Property is not matching,"+dName+","+sdProperty.get(dName)+","+tdProperty.get(dName)+System.lineSeparator());
+			}
+		}
+	}
+}

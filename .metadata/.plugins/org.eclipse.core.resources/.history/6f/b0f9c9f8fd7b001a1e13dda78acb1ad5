@@ -1,0 +1,74 @@
+import java.util.concurrent.atomic.AtomicInteger;
+
+public class RaceConditionAndSolution {
+
+	public static void main(String[] args) throws InterruptedException {
+		CounterWithRaceCondition counter =new CounterWithRaceCondition();
+		IncrementingThread i = new IncrementingThread(counter);
+		DecrementingThread d = new DecrementingThread(counter);
+		i.start();
+		d.start();
+		i.join();
+		d.join();
+		System.out.println("Final Value is : " + counter.getValue());
+	}
+
+}
+
+	class CounterWithRaceCondition {
+		int c = 0;
+		
+		public void increment(){
+			c++;
+		}
+		
+		public void decrement(){
+			c--;
+		}
+		public int getValue(){
+			return c;
+		}
+	}
+	
+	class CounterWithOutRaceCondition {
+		AtomicInteger c = new AtomicInteger(0);
+		
+		public void increment(){
+			c++;
+		}
+		
+		public void decrement(){
+			c--;
+		}
+		public int getValue(){
+			return c;
+		}
+	}
+	
+	class IncrementingThread extends Thread {
+		CounterWithRaceCondition counter;
+		
+		IncrementingThread(CounterWithRaceCondition counter){
+			this.counter = counter;
+		}
+		
+		public void run() {
+			for(int i=0; i<1000; i++) {
+				counter.increment();
+			}
+		}
+	}
+	
+	class DecrementingThread extends Thread {
+		CounterWithRaceCondition counter;
+		
+		DecrementingThread(CounterWithRaceCondition counter){
+			this.counter = counter;
+		}
+		
+		public void run() {
+			for(int i=0; i<1000; i++) {
+				counter.decrement();
+			}
+		}
+	}

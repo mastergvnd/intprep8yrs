@@ -1,0 +1,12 @@
+package paypal;
+
+import java.util.PriorityQueue;
+import java.util.Properties;
+
+public class _B26ReorganizeString {
+
+	public static void main(String[] args) {
+		PriorityQueue<Properties<String, String>> q = new PriorityQueue<>();
+	}
+
+}

@@ -1,0 +1,51 @@
+package paypal;
+
+import java.util.AbstractMap;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.PriorityQueue;
+
+public class _B26ReorganizeString {
+
+	public static void main(String[] args) {
+
+		String str = "aab";
+		System.out.println(reorganizeString(str));
+//		q.add(new AbstractMap.SimpleEntry<Character, Integer>('B', 2));
+	}
+
+	public static String reorganizeString(String s) {
+		Map<Character, Integer> frequencies = getCharFrequency(s);
+		
+		PriorityQueue<Map.Entry<Character, Integer>> q = new PriorityQueue<>(
+				new Comparator<Map.Entry<Character, Integer>>() {
+					public int compare(Entry<Character, Integer> arg0, Entry<Character, Integer> arg1) {
+						return arg1.getValue().compareTo(arg0.getValue());
+					}
+		});
+		q.addAll(frequencies.entrySet());
+		
+		StringBuilder sb = new StringBuilder();
+		
+		Entry<Character, Integer> entry = q.poll();
+		if((s.length()+1)/2 > entry.getValue())
+			return "";
+		int counter = 0;
+		while(entry != null) {
+			for(int i = counter; i< entry.getValue() && i<s.length(); i+=2) {
+				sb.insert(counter, entry.getKey());
+			}
+			counter+=2;
+		}
+		return null;
+	}
+
+	private static Map<Character, Integer> getCharFrequency(String s) {
+		Map<Character, Integer> frequencies = new HashMap<Character, Integer>();
+		for(char c : s.toCharArray())
+			frequencies.put(c, frequencies.getOrDefault(c, 0) + 1);
+		return frequencies;
+	}
+}

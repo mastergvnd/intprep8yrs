@@ -1,0 +1,10 @@
+package com.essbase.japi;
+
+import java.io.BufferedWriter;
+
+public class Writer {
+	public static NEW_LINE = "<br/>";
+	public static void write(BufferedWriter writer, String text){
+		
+	}
+}

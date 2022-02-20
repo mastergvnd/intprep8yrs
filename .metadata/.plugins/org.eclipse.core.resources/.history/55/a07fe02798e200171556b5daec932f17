@@ -1,0 +1,12 @@
+package com.essbase.japi;
+
+import java.io.BufferedWriter;
+import java.io.IOException;
+
+public class Writer {
+	public static String NEW_LINE = "<br/>";
+	private static
+	public static void write(BufferedWriter writer, String text, String separator) throws IOException{
+		writer.append(text+separator);
+	}
+}

@@ -1,0 +1,19 @@
+package lambda;
+
+import java.util.function.Predicate;
+import java.util.function.Supplier;
+
+public class SupplierTest {
+
+	public static void main(String[] args) {
+		Supplier<Person> supplier = () -> new Person("Govind", 22);
+		Predicate<Person> predicate = p -> p.age > 18;
+		
+		System.out.println("Is Person eligible for voting : " + isPersonEligibleForVoting(supplier, predicate));
+	}
+
+	private static String isPersonEligibleForVoting(Supplier<Person> supplier, Predicate<Person> predicate) {
+		return predicate.test(supplier.get());
+	}
+
+}

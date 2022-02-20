@@ -1,0 +1,19 @@
+package com.testing;
+
+import java.io.FileWriter;
+
+import com.opencsv.CSVWriter;
+
+public class OpenCSVEx {
+
+	public static void main(String[] args) {
+		FileWriter w = new FileWriter("yourfile.csv");
+				CSVWriter writer = new CSVWriter(w, '\t');
+				writer.flush();
+				CSVWriter writer2 = new CSVWriter(w, '\t');
+				writer2.flush();
+				w.close();
+
+	}
+
+}

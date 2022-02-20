@@ -1,0 +1,5 @@
+package com.essbase.japi;
+
+public enum Highlighter {
+	RED, GREEN
+}

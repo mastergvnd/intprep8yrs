@@ -1,0 +1,8 @@
+package com.sonali.polymorphism;
+
+public class Animal {
+
+	public void sound(int a) {
+		System.out.println("Sound");
+	}
+}

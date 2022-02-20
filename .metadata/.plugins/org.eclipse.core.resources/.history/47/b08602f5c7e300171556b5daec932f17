@@ -1,0 +1,27 @@
+package com.essbase.japi;
+
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class Writer {
+	public static String NEW_LINE = "<br/>";
+	private static BufferedWriter writer = null;
+	static{
+		try {
+			System.out.println("writer initialized");
+			writer = new BufferedWriter(new FileWriter("D:\\diff.html"));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	public static void write(String text, String separator) throws IOException{
+		writer.append(text+separator);
+	}
+	public static void closeWriter() throws IOException{
+		writer.close();
+	}
+	public static void write(String text, String separator, String color, int indentation){
+		writer.append("<html><font color='"+color+""'style=\"background-color:#eacbdb;padding-left:30em;\">")
+	}
+}

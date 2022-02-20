@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract method &apos;private static void createApplication(IEssOlapServer olapSvr) throws EssException &apos; from &apos;com.test.OutLineType.main()&apos; to &apos;com.test.OutLineType&apos;&#x0D;&#x0A;- Original project: &apos;EssBaseTest&apos;&#x0D;&#x0A;- Method name: &apos;createApplication&apos;&#x0D;&#x0A;- Destination type: &apos;com.test.OutLineType&apos;&#x0D;&#x0A;- Declared visibility: &apos;private&apos;" comments="false" description="Extract method &apos;createApplication&apos;" destination="0" exceptions="false" flags="786434" id="org.eclipse.jdt.ui.extract.method" input="/src&lt;com.test{OutLineType.java" name="createApplication" replace="false" selection="1300 647" stamp="1537813407819" version="1.0" visibility="2"/>
+</session>

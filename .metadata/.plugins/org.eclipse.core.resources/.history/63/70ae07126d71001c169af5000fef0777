@@ -1,0 +1,42 @@
+package paypal;
+
+import java.util.AbstractMap;
+import java.util.AbstractMap.SimpleEntry;
+import java.util.Comparator;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.PriorityQueue;
+
+public class _B26ReorganizeString {
+
+	public static void main(String[] args) {
+		PriorityQueue<Map.Entry<Character, Integer>> q = new PriorityQueue<>(new Comparator<Map.Entry<Character, Integer>>() {
+
+			@Override
+			public int compare(Entry<Character, Integer> arg0, Entry<Character, Integer> arg1) {
+				return arg1.getValue().compareTo(arg0.getValue());
+			}
+		
+		
+		});
+		q.add(new AbstractMap.SimpleEntry<Character, Integer>('B', 2));
+		q.add(new AbstractMap.SimpleEntry<Character, Integer>('D', 4));
+		q.add(new AbstractMap.SimpleEntry<Character, Integer>('A', 3));
+		q.add(new AbstractMap.SimpleEntry<Character, Integer>('C', 1));
+		
+		while(!q.isEmpty())
+			System.out.println(q.poll());
+	}
+	
+//	private static class MyComparator<AbstractMap.SimpleEntry<Character, Integer>> implements Comparator<AbstractMap.SimpleEntry<Character, Integer>> {
+//
+//		public MyComparator() {
+//			
+//		}
+//		@Override
+//		public int compare(SimpleEntry<Character, Integer> entry1, SimpleEntry<Character, Integer> entry2) {
+//			return Integer.compare(entry1.getValue(), entry2.getValue());
+//		}
+//		
+//	}
+}

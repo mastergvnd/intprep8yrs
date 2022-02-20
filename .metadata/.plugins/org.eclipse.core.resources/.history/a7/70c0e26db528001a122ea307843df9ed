@@ -1,0 +1,15 @@
+package com.sonali.oops;
+
+public class Employee {
+
+	private int id;
+	private String name;
+	private float salary;
+
+	public Employee() {
+		
+	}
+	public void setId(int a) {
+		this.id = a;
+	}
+}

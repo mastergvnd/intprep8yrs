@@ -1,0 +1,11 @@
+package lambda;
+
+import java.util.function.Supplier;
+
+public class SupplierTest {
+
+	public static void main(String[] args) {
+		Supplier<Person> supplier = () -> new Person("Govind", 22);
+	}
+
+}

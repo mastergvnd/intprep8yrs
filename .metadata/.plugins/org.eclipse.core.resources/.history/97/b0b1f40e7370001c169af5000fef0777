@@ -1,0 +1,9 @@
+package paypal;
+
+public class _B24ReplaceSpecialCharwithCharToGetGoodString {
+
+	public static void main(String[] args) {
+		String str = “abcdefghijklnopqrstuvwxy” ''
+	}
+
+}

@@ -1,0 +1,21 @@
+package com.hyperion.planning;
+
+import com.essbase.api.base.EssException;
+
+public class MaxlDemo {
+	public static void main(String[] args) {
+		EssbaseCube cube = new EssbaseCube();
+		cube.setApplicationName("Sample_U");
+		cube.setCubeName("Basic");
+		try{
+			EssbaseConnectionManager.connectToCube(cube);
+			cube.load();
+		} catch (EssException e) {
+			System.out.println("Error : "+e.getMessage());
+			e.printStackTrace();
+		}
+		finally{
+			EssbaseConnectionManager.comeOutClean(cube);
+		}
+	}
+}

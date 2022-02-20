@@ -1,0 +1,55 @@
+package com.essbase.japi;
+
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class Writer {
+	public static String NEW_LINE = "<br/>";
+	private static BufferedWriter writer = null;
+	public static String higHlightRed = "RED";
+	public static String higHlightGreen = "GREEN";
+	public static String higHlightBLACK = "BLACK";
+	static{
+		try {
+			System.out.println("writer initialized");
+			writer = new BufferedWriter(new FileWriter("D:\\diff.rtf"));
+			writer.append("<html>");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	public static void write(String text, String separator) throws IOException{
+		writer.append(text+separator);
+	}
+	public static void closeWriter() throws IOException{
+		writer.append("/<html>");
+		writer.close();
+	}
+	public static void write(String source, String target, int sIndentation, int tIndentation) throws IOException{
+		/*if(source == null)
+			writer.append("<font color='"+higHlightGreen+"'style=\"background-color:#fce9bf;padding-left:"+tIndentation+"em;\">"+target+NEW_LINE+"</font>");
+		else if(target == null)
+			writer.append("<font color='"+higHlightRed+"'style=\"background-color:#fce9bf;padding-left:"+sIndentation+"em;\">"+source+NEW_LINE+"</font>");
+		else if(source.equals(target)){
+			writer.append("<font color='"+higHlightBLACK+"'style=\"background-color:#fce9bf;padding-left:"+sIndentation+"em;\">"+source);
+			writer.append("<font color='"+higHlightBLACK+"'style=\"background-color:#fce9bf;padding-left:"+tIndentation+"em;\">"+target+NEW_LINE+"</font>");
+		}
+		else{
+			writer.append("<font color='"+higHlightGreen+"'style=\"background-color:#fce9bf;padding-left:"+sIndentation+"em;\">"+source);
+			writer.append("<font color='"+higHlightRed+"'style=\"background-color:#fce9bf;padding-left:"+tIndentation+"em;\">"+target+NEW_LINE+"</font>");
+		}*/
+		if(source == null)
+			writer.append("\t\t\t\t\t"+target+NEW_LINE+System.lineSeparator());
+		else if(target == null)
+			writer.append("\t\t\t\t\t"+source+NEW_LINE+System.lineSeparator());
+		else if(source.equals(target)){
+			writer.append("\t\t\t\t\t"+source);
+			writer.append("\t\t\t\t\t"+target+System.lineSeparator());
+		}
+		else{
+			writer.append("\t\t\t\t\t"+source);
+			writer.append("\t\t\t\t\t"+target+System.lineSeparator());
+		}
+	}
+}

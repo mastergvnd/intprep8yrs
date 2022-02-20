@@ -1,0 +1,15 @@
+package arrays;
+
+public class _A4_MaximumProfitInJobScheduling {
+
+	public static void main(String[] args) {
+		
+	}
+
+}
+
+class Solution {
+    public int jobScheduling(int[] startTime, int[] endTime, int[] profit) {
+        return 0;
+    }
+}

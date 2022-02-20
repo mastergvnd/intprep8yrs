@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;com.designPatterns.adapterPattern&apos; to &apos;InterviewPrep/src&apos;&#x0D;&#x0A;- Original project: &apos;DesignPatterns&apos;&#x0D;&#x0A;- Destination element: &apos;InterviewPrep/src&apos;&#x0D;&#x0A;- Original element: &apos;DesignPatterns/src/com.designPatterns.adapterPattern&apos;" description="Copy package" destination="=InterviewPrep/src" element1="/src&lt;com.designPatterns.adapterPattern" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1639155503021" version="1.0"/>
+</session>

@@ -1,0 +1,39 @@
+package paypal;
+
+import linkedlist.LLNode;
+import linkedlist.LinkedList;
+import linkedlist.LinkedListUtils;
+
+public class RotateLinkedListClockwise {
+
+	public static void main(String[] args) {
+		LinkedList list = new LinkedList();
+		list.setHead(new LLNode(1, null));
+		
+		list.getHead().setNext(new LLNode(2, null));
+		list.getHead().getNext().setNext(new LLNode(3, null));
+		list.getHead().getNext().getNext().setNext(new LLNode(4, null));
+		list.getHead().getNext().getNext().getNext().setNext(new LLNode(5, null));
+		
+		LinkedListUtils.printLinkedList(list.getHead());
+		
+		printRotateLinkedListClockwise(list.getHead(), 2);
+	}
+
+	private static void printRotateLinkedListClockwise(LLNode head, int k) {
+		LLNode fastPtr = head, slowPtr = head;
+		LLNode temp = null;
+		for(int i=1; i<=k; i++)
+			fastPtr = fastPtr.getNext();
+		temp = fastPtr;
+		while(fastPtr != null){
+			slowPtr = slowPtr.getNext();
+			fastPtr = fastPtr.getNext();
+		}
+		temp.setNext(null);
+		while(slowPtr.getNext() != null)
+			slowPtr = slowPtr.getNext();
+		slowPtr.setNext(head);
+	}
+
+}
