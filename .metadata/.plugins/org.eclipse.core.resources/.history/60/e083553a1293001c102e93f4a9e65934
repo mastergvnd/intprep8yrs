@@ -1,0 +1,5 @@
+package designPatterns.strategyPattern;
+
+public class ListParser extends AbstractParser{
+
+}

@@ -5,6 +5,7 @@ public class _B32StringPermutations {
 	public static void main(String[] args) {
 		StringBuilder s = new StringBuilder("ABC");
 		printPermutations(s, 0, s.length()-1);
+		System.out.println("Done");
 	}
 	
 	private static void printPermutations(StringBuilder s, int l, int r) {
