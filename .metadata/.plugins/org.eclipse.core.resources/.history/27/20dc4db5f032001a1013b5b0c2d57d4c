@@ -1,7 +1,0 @@
-package com.sonali.polymorphism;
-
-public class Dog extends Animal {
-	public void sound(int a , int b) {
-		System.out.println("bhow bhow");
-	}
-}

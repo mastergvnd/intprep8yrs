@@ -1,9 +1,0 @@
-package com.essbase.japi;
-
-import java.io.BufferedWriter;
-
-public class Writer {
-	public static void write(BufferedWriter writer){
-		
-	}
-}

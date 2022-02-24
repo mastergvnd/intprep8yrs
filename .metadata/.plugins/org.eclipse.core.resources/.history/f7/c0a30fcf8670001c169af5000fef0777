@@ -1,9 +1,0 @@
-package paypal;
-
-public class _B25ReconstructItinerary {
-
-	public static void main(String[] args) {
-		List<List<String>> tickets = new ArrayList<List<String>>();
-	}
-
-}

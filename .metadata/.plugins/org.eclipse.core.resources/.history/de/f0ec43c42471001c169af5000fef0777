@@ -1,9 +1,0 @@
-package paypal;
-
-public class _B26ReorganizeString {
-
-	public static void main(String[] args) {
-		
-	}
-
-}

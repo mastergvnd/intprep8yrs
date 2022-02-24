@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename local variable &apos;a&apos; in &apos;com.testing.MaximumProfit.solve(...)&apos; to &apos;p&apos;&#x0D;&#x0A;- Original project: &apos;Testing&apos;&#x0D;&#x0A;- Original element: &apos;com.testing.MaximumProfit.solve(int[]).a&apos;&#x0D;&#x0A;- Renamed element: &apos;a&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;a&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;com.testing{MaximumProfit.java[MaximumProfit~solve~\[I@a!238!244!244!244!\[I!0!true" name="p" references="true" stamp="1556040491753" version="1.0"/>
-</session>

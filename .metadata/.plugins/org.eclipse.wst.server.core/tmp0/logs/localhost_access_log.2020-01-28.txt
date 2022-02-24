@@ -1,8 +1,0 @@
-127.0.0.1 - - [28/Jan/2020:21:01:02 +0530] "GET / HTTP/1.1" 404 709
-0:0:0:0:0:0:0:1 - - [28/Jan/2020:21:01:03 +0530] "GET /Servlet1/ServletExPath HTTP/1.1" 200 43
-0:0:0:0:0:0:0:1 - - [28/Jan/2020:21:01:28 +0530] "GET /Servlet1/ServletExPath HTTP/1.1" 200 43
-0:0:0:0:0:0:0:1 - - [28/Jan/2020:21:01:28 +0530] "GET /Servlet1/ServletExPath HTTP/1.1" 200 43
-0:0:0:0:0:0:0:1 - - [28/Jan/2020:21:01:29 +0530] "GET /Servlet1/ServletExPath HTTP/1.1" 200 43
-0:0:0:0:0:0:0:1 - - [28/Jan/2020:21:01:29 +0530] "GET /Servlet1/ServletExPath HTTP/1.1" 200 43
-0:0:0:0:0:0:0:1 - - [28/Jan/2020:21:01:33 +0530] "GET /Servlet1/ServletExPath1 HTTP/1.1" 404 736
-0:0:0:0:0:0:0:1 - - [28/Jan/2020:21:01:36 +0530] "GET /Servlet1/ServletExPath2 HTTP/1.1" 200 43

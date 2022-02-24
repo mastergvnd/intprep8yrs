@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename compilation unit &apos;arrays._A6_K_PairsWithSmallestSums.java&apos; to &apos;_A6_KPairsWithSmallestSums.java&apos;&#x0D;&#x0A;- Original project: &apos;Z_InterviewPrep&apos;&#x0D;&#x0A;- Original element: &apos;arrays._A6_K_PairsWithSmallestSums.java&apos;&#x0D;&#x0A;- Renamed element: &apos;arrays._A6_KPairsWithSmallestSums.java&apos;" description="Rename compilation unit &apos;_A6_K_PairsWithSmallestSums.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;arrays{_A6_K_PairsWithSmallestSums.java" name="_A6_KPairsWithSmallestSums.java" references="false" stamp="1645007625974" version="1.0"/>
-</session>

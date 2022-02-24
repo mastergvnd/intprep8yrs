@@ -1,6 +1,8 @@
 package com.educative.firstCourse;
 
-public class _A5_PrintEvenOddWithTwoThreadsWay2 {
+import java.util.concurrent.atomic.AtomicInteger;
+
+public class _A5_PrintEvenOddWithTwoThreadsWay3 {
 
 	public static void main(String[] args) throws InterruptedException {
 		
@@ -23,31 +25,27 @@ public class _A5_PrintEvenOddWithTwoThreadsWay2 {
 		oddPrinter.start();
 		evenPrinter.join();
 		oddPrinter.join();
-		System.out.println("Main thread completed.");
+		System.out.println("Main thread completed2.");
 	}
 }
 
-class NumberPrinter {
-	int number = 1;
+class NumberPrinter2 {
+	AtomicInteger number = new AtomicInteger(1);
 	
 	public void evenPrinter() {
-		while(number <= 20) {
-			synchronized (this) {
-				if(number % 2 == 0) {
-					System.out.println(Thread.currentThread().getName() + " : " + number);
-					number++;
-				}
+		while(number.get() <= 20) {
+			if(number.get() % 2 == 0) {
+				System.out.println(Thread.currentThread().getName() + " : " + number);
+				number.incrementAndGet();
 			}
 		}
 	}
 	
 	public void oddPrinter() {
-		while(number <= 20) {
-			synchronized (this) {
-				if(number % 2 != 0) {
-					System.out.println(Thread.currentThread().getName() + " : " + number);
-					number++;
-				}
+		while(number.get() <= 20) {
+			if(number.get() % 2 != 0) {
+				System.out.println(Thread.currentThread().getName() + " : " + number);
+				number.incrementAndGet();
 			}
 		}
 	}

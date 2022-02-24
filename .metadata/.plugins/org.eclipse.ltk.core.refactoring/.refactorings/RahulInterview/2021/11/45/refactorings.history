@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename local variable &apos;n&apos; in &apos;oracle.interview.candidates.easy.LeftRotation.leftRoatateArray(...)&apos; to &apos;k&apos;&#x0D;&#x0A;- Original project: &apos;RahulInterview&apos;&#x0D;&#x0A;- Original element: &apos;oracle.interview.candidates.easy.LeftRotation.leftRoatateArray(int[], int).n&apos;&#x0D;&#x0A;- Renamed element: &apos;n&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;n&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;oracle.interview.candidates.easy{LeftRotation.java[LeftRotation~leftRoatateArray~\[I~I@n!562!566!566!566!I!0!true" name="k" references="true" stamp="1635753504888" version="1.0"/>
-</session>

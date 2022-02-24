@@ -1,7 +1,0 @@
-package com.sonali.collection.ArrayList;
-
-public class Employee {
-public Employee(){
-
-}
-}

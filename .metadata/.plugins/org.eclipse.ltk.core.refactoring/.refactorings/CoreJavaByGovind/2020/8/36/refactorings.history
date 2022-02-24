@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename type &apos;com.govind.practice.CHild&apos; to &apos;Child&apos;&#x0D;&#x0A;- Original project: &apos;CoreJavaByGovind&apos;&#x0D;&#x0A;- Original element: &apos;com.govind.practice.CHild&apos;&#x0D;&#x0A;- Renamed element: &apos;com.govind.practice.Child&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;CHild&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.govind.practice{CHild.java[CHild" matchStrategy="1" name="Child" qualified="false" references="true" similarDeclarations="false" stamp="1598777464586" textual="false" version="1.0"/>
-</session>

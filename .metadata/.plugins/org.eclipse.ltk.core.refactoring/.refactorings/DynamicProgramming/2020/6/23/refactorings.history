@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Extract method &apos;private static void printMetrix(int [] weights, int capacity, int [] [] dp)&apos; from &apos;ZeroOneKnapsackProblem1.BottomUpApproach.solveKnapsack()&apos; to &apos;ZeroOneKnapsackProblem1.BottomUpApproach&apos;&#x0D;&#x0A;- Original project: &apos;DynamicProgramming&apos;&#x0D;&#x0A;- Method name: &apos;printMetrix&apos;&#x0D;&#x0A;- Destination type: &apos;ZeroOneKnapsackProblem1.BottomUpApproach&apos;&#x0D;&#x0A;- Declared visibility: &apos;private&apos;" comments="false" description="Extract method &apos;printMetrix&apos;" destination="0" exceptions="false" flags="786434" id="org.eclipse.jdt.ui.extract.method" input="/src&lt;ZeroOneKnapsackProblem1{BottomUpApproach.java" name="printMetrix" replace="false" selection="984 150" stamp="1591429812145" version="1.0" visibility="2"/>
-</session>

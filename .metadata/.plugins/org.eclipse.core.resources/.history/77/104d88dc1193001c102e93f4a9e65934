@@ -1,5 +1,0 @@
-package designPatterns.strategyPattern;
-
-public interface Parser {
-
-}

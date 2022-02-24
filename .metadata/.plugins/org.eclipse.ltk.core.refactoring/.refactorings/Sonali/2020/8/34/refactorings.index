@@ -1,6 +1,0 @@
-1597675041023	Move 2 resources to 'WEB-INF'
-1597675058489	Move 'failure.jsp' to 'errorPages'
-1597675134892	Move 'web.xml' to 'WebContent'
-1597675146578	Move 'web.xml' to 'WEB-INF'
-1597675150177	Move 'NewFile.jsp' to 'WebContent'
-1597675761683	Move 'errorPages' to 'WebContent'

@@ -1,5 +1,0 @@
-package designPatterns.strategyPattern;
-
-public abstract class JsonParser implements Parser{
-
-}

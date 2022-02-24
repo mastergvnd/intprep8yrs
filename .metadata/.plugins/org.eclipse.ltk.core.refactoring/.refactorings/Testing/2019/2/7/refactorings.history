@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Extract method &apos;private static void solve(int [] [] dim, int [] result)&apos; from &apos;com.testing.Photo.main()&apos; to &apos;com.testing.Photo&apos;&#x0D;&#x0A;- Original project: &apos;Testing&apos;&#x0D;&#x0A;- Method name: &apos;solve&apos;&#x0D;&#x0A;- Destination type: &apos;com.testing.Photo&apos;&#x0D;&#x0A;- Declared visibility: &apos;private&apos;" comments="false" description="Extract method &apos;solve&apos;" destination="0" exceptions="false" flags="786434" id="org.eclipse.jdt.ui.extract.method" input="/src&lt;com.testing{Photo.java" name="solve" replace="false" selection="209 248" stamp="1550327110642" version="1.0" visibility="2"/>
-</session>

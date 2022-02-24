@@ -1,9 +1,0 @@
-package lambda;
-
-public class PerdicateDemo {
-
-	public static void main(String[] args) {
-		
-	}
-
-}
