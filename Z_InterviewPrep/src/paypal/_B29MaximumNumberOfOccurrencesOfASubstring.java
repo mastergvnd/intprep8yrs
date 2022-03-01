@@ -22,30 +22,31 @@ public class _B29MaximumNumberOfOccurrencesOfASubstring {
 	}
 
 	public static int maxFreq(String s, int maxLetters, int minSize, int maxSize) {
-		Map<String, Integer> freq = new HashMap<String, Integer>();
-		for(int i=0, j=minSize; j<s.length(); i++, j++) {
-			String subStr = s.substring(i, j)
-			if(isValidMaxLetters(subStr, maxLetters)) {
-				freq.put(subStr, freq.getOrDefault(subStr, 0) + 1);
-			}
-			subStr = s.substring(i, 0);
-			if(isValidMaxLetters(subStr, maxLetters)) {
-				freq.put(subStr, freq.getOrDefault(subStr, 0) + 1);
-			}
-			subStr = new StringBuilder(subStr);
-			subStr.deleteCharAt(0);
-		}
-		subStr = new StringBuilder(subStr);
-		System.out.println(subStr);
-		if(isValidMaxLetters(subStr, maxLetters)) {
-			freq.put(subStr, freq.getOrDefault(subStr, 0) + 1);
-		}
-		System.out.println(freq);
-		int count = 0;
-		for(Map.Entry<StringBuilder, Integer> entry : freq.entrySet()) 
-			if(entry.getValue() > count)
-				count = entry.getValue();
-		return count;
+//		Map<String, Integer> freq = new HashMap<String, Integer>();
+//		for(int i=0, j=minSize; j<s.length(); i++, j++) {
+//			String subStr = s.substring(i, j)
+//			if(isValidMaxLetters(subStr, maxLetters)) {
+//				freq.put(subStr, freq.getOrDefault(subStr, 0) + 1);
+//			}
+//			subStr = s.substring(i, 0);
+//			if(isValidMaxLetters(subStr, maxLetters)) {
+//				freq.put(subStr, freq.getOrDefault(subStr, 0) + 1);
+//			}
+//			subStr = new StringBuilder(subStr);
+//			subStr.deleteCharAt(0);
+//		}
+//		subStr = new StringBuilder(subStr);
+//		System.out.println(subStr);
+//		if(isValidMaxLetters(subStr, maxLetters)) {
+//			freq.put(subStr, freq.getOrDefault(subStr, 0) + 1);
+//		}
+//		System.out.println(freq);
+//		int count = 0;
+//		for(Map.Entry<StringBuilder, Integer> entry : freq.entrySet()) 
+//			if(entry.getValue() > count)
+//				count = entry.getValue();
+//		return count;
+		return 0;
 	}
 
 	private static boolean isValidMaxLetters(String subStr, int maxLetters) {

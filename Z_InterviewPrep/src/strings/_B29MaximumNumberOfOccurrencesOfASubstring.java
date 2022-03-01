@@ -22,38 +22,37 @@ public class _B29MaximumNumberOfOccurrencesOfASubstring {
 	}
 
 	public static int maxFreq(String s, int maxLetters, int minSize, int maxSize) {
+        Deque<Character> queue = new LinkedList<Character>();
 		Map<String, Integer> freq = new HashMap<String, Integer>();
-		for(int i=0, j=minSize; j<s.length(); i++, j++) {
-			String subStr = s.substring(i, j)
-			if(isValidMaxLetters(subStr, maxLetters)) {
-				freq.put(subStr, freq.getOrDefault(subStr, 0) + 1);
+		for(int i =0; i<minSize; i++)
+			queue.add(s.charAt(i));
+		for(int j=minSize; j<s.length(); j++) {
+			if(isValidMaxLetters(queue, maxLetters)) {
+				freq.put(queue.toString(), freq.getOrDefault(queue.toString(), 0) + 1);
 			}
-			subStr = s.substring(i, 0);
-			if(isValidMaxLetters(subStr, maxLetters)) {
-				freq.put(subStr, freq.getOrDefault(subStr, 0) + 1);
+			queue.add(s.charAt(j));
+			if(isValidMaxLetters(queue, maxLetters)) {
+				freq.put(queue.toString(), freq.getOrDefault(queue.toString(), 0) + 1);
 			}
-			subStr = new StringBuilder(subStr);
-			subStr.deleteCharAt(0);
+			queue.removeFirst();
 		}
-		subStr = new StringBuilder(subStr);
-		System.out.println(subStr);
-		if(isValidMaxLetters(subStr, maxLetters)) {
-			freq.put(subStr, freq.getOrDefault(subStr, 0) + 1);
+		
+		if(isValidMaxLetters(queue, maxLetters)) {
+			freq.put(queue.toString(), freq.getOrDefault(queue.toString(), 0) + 1);
 		}
-		System.out.println(freq);
 		int count = 0;
-		for(Map.Entry<StringBuilder, Integer> entry : freq.entrySet()) 
+		for(Map.Entry<String, Integer> entry : freq.entrySet()) 
 			if(entry.getValue() > count)
 				count = entry.getValue();
 		return count;
-	}
+    }
 
-	private static boolean isValidMaxLetters(String subStr, int maxLetters) {
-		Set<Character> set = new HashSet<Character>();
-		for(int i=0; i<subStr.length(); i++) {
-			set.add(subStr.charAt(i));
+	private static boolean isValidMaxLetters(Deque<Character> queue, int maxLetters) {
+		Set<Character> charCount = new HashSet<Character>();
+		for(Character c : queue) {
+			charCount.add(c);
 		}
-		return (set.size() <= maxLetters);
+		return (charCount.size() <= maxLetters);
 	}
 
 }

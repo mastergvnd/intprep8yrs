@@ -13,8 +13,8 @@ public class _B12ReverseLinkedListInGroups {
 		LinkedListUtils.printLinkedList(list.head);
 		ListNode head = reverseListInGroups(list.head, 4);
 		LinkedListUtils.printLinkedList(head);
-		Object []actuals = LinkedListUtils.getLinkedListElements(head);
-		Assert.assertArrayEquals(new Integer[]{4,3,2,1,8,7,6,5,9,10}, actuals);
+		int []actuals = LinkedListUtils.getLinkedListElements(head);
+		Assert.assertArrayEquals(new int[]{4,3,2,1,8,7,6,5,9,10}, actuals);
 	}
 
 	private static ListNode reverseListInGroups(ListNode head, int k) {

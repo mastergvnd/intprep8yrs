@@ -15,8 +15,8 @@ public class _B13RearrangeEvenOddNodes {
 		LinkedListUtils.printLinkedList(list.head);
 		ListNode head = rearrangeEvenOdd(list.head);
 		LinkedListUtils.printLinkedList(head);
-		Object []actuals = LinkedListUtils.getLinkedListElements(head);
-		Assert.assertArrayEquals(new Integer[]{1,3,5,7,9,2,4,6,8,10}, actuals);
+		int []actuals = LinkedListUtils.getLinkedListElements(head);
+		Assert.assertArrayEquals(new int[]{1,3,5,7,9,2,4,6,8,10}, actuals);
 	}
 
 	private static ListNode rearrangeEvenOdd(ListNode head) {

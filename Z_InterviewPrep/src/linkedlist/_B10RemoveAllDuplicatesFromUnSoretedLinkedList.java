@@ -17,9 +17,9 @@ import linkedlist.ListNode;
 	public class _B10RemoveAllDuplicatesFromUnSoretedLinkedList {	public static void main(String[] args) {
 		LinkedList list = new LinkedList(new int[]{1,3,1,1,1,2,9,5,8,5});
 		ListNode head = removeDuplicates(list.head);
-		Object actuals[] = LinkedListUtils.getLinkedListElements(head);
+		int actuals[] = LinkedListUtils.getLinkedListElements(head);
 		System.out.println(Arrays.toString(actuals));
-		Assert.assertArrayEquals("The duplicates are not removed", new Integer[]{1,3,2,9,5,8}, actuals);
+		Assert.assertArrayEquals("The duplicates are not removed", new int[]{1,3,2,9,5,8}, actuals);
 	}
 
 	private static ListNode removeDuplicates(ListNode head) {

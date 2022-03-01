@@ -1,7 +1,9 @@
 package linkedlist;
 
 public class LinkedList {
+	int size = 0;
 	public LinkedList(int ar[]) {
+		this.size = ar.length;
 		head = LinkedListUtils.createLinkedList(head, ar);
 	}
 	

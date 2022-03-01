@@ -37,7 +37,7 @@ public class LinkedListUtils {
 		return head;
 	}
 	
-	public static Object[] getLinkedListElements(ListNode head) {
+	public static int[] getLinkedListElements(ListNode head) {
 		List<Integer> list = new ArrayList<Integer>();
 		
 		ListNode temp = head;
@@ -45,7 +45,7 @@ public class LinkedListUtils {
 			list.add(temp.val);
 			temp = temp.next;
 		}
-		return list.toArray();
+		return list.stream().mapToInt(Integer::intValue).toArray();
 			
 	}
 }
